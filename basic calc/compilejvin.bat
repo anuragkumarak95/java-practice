@@ -1,0 +1,2 @@
+javac jvin.java
+pause

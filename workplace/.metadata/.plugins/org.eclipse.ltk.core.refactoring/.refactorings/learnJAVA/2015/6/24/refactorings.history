@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;learnJAVA.hello.main().scanname&apos; in &apos;learnJAVA.hello.main()&apos; to field&#x0D;&#x0A;- Original project: &apos;learnJAVA&apos;&#x0D;&#x0A;- Original element: &apos;learnJAVA.hello.main().scanname&apos;&#x0D;&#x0A;- Field name: &apos;scanname&apos;&#x0D;&#x0A;- Initialize field in method&#x0D;&#x0A;- Declared visibility: &apos;private&apos;&#x0D;&#x0A;- Declare field &apos;static&apos;" description="Convert local variable &apos;scanname&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;learnJAVA{hello.java" name="scanname" selection="211 33" stamp="1434040533969" static="true" version="1.0" visibility="2"/>
+</session>

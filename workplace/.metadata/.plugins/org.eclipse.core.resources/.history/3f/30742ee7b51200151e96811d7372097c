@@ -9,7 +9,7 @@ public class armstrong_check {
 		int test = num;
 		 int arms=0;
 		do{		
-			 arms = arms + ((test%10)*(test%10)*(test%10));
+			 arms = arms + ((test%10)*(test%10));
 			 test = test / 10;
 		}while(test>0);
 		

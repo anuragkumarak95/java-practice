@@ -6,7 +6,6 @@ public class javaString {
 		String first = "Hello";
 		String con;
 		String last = "hi";
-		int length = first.length();
 		con = first.concat(last);
 		String name = "Hello";
 		System.out.println(first==name);

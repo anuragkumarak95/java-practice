@@ -1,0 +1,29 @@
+package Experimentals;
+
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class dynoarray {
+/** trying to use a dynamically called array.*/
+	
+	@SuppressWarnings("resource")
+	public static void main(String[] args) {
+		// trying to create a dynamic array of String:
+		Scanner scn = new Scanner(System.in);
+		StringTokenizer tkz = new StringTokenizer(scn.nextLine());//input String.
+		
+		int n=tkz.countTokens()//setting the limit length of the array.
+				,i=0;
+		String[] arr = new String[n];//array that will contain tokens of the input String on ascending index values.
+		while(tkz.hasMoreTokens()){
+			arr[i++]=tkz.nextToken();//saving all the respective tokens in the array.
+			
+		}
+		System.out.println(n);//no. of tokens created.
+		for(String j : arr){
+			System.out.println(j);//straight print
+		}
+		for (int k=n-1;k>=0;k--){System.out.print(arr[k] + " ");}//reverse print
+	}
+
+}

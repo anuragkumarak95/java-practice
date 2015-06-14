@@ -1,0 +1,24 @@
+package learnJAVA;
+
+import java.util.StringTokenizer;
+
+public class dynoarray {
+
+	public static void main(String[] args) {
+		// TODO trying to create a dynamic array of String
+		
+		StringTokenizer tkz = new StringTokenizer("hi my name is anurag!");
+		
+		int n=tkz.countTokens()
+				,i=0;
+		String[] arr = new String[n];
+		while(tkz.hasMoreTokens()){
+			arr[i++]=tkz.nextToken();
+			
+		}
+		for(String show : arr){
+			System.out.println(show);
+		}
+	}
+
+}

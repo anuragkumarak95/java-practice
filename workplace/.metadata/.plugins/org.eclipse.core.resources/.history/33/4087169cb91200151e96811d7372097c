@@ -1,0 +1,23 @@
+package Experimentals;
+
+public class palindrome {
+
+	public static void main(String[] args) {
+		// TODO palindrome checking.
+		cons.give("Enter the String to check: ");
+		String chk = cons.take();
+		palidchk(chk);
+	}
+	
+	static void palidchk(String str){
+		int len = str.length();
+		String pl = "";
+		for(int i=0;i<len;i++){
+			pl = str.charAt(i) + pl;
+		}
+		
+		if(str.equals(pl)){cons.give(str + " is a palindrome.");}
+		else{cons.give(str + " is not a palindrome.");}
+	}
+
+}

@@ -1,0 +1,15 @@
+package Experimentals;
+
+public class calculator_project {
+	
+	public static void main(String[] args){
+		
+		cons.give("Enter first number: ");
+		double num1 = Double.parseDouble(cons.take());
+		cons.give("Enter second number: ");
+		double num2 = Double.parseDouble(cons.take());
+		
+	
+	}
+	
+}

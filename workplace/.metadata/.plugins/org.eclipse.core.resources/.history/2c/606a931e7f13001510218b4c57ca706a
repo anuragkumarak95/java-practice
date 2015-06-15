@@ -34,7 +34,7 @@ public class cons {
 		for(String a : txt){System.out.print(" " + a);}
 		System.out.print(" ]");
 	}
-	
+
 	//string to tokened arraylist converter.
 	public static void tokenize(String str, ArrayList<String> strarr){
 		StringTokenizer tkz = new StringTokenizer(str);

@@ -1,0 +1,10 @@
+package Experimentals;
+
+public class using_cons_tokenize {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

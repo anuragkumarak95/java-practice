@@ -27,14 +27,7 @@ public class cons {
 		for(double arr : txt){System.out.println(arr);}}
 	public static void give(float[] txt){
 		for(float arr : txt){System.out.println(arr);}}
-	
-	//arraylist display function.
-	public static void give(ArrayList<String> txt){
-		System.out.print("[");
-		for(String a : txt){System.out.print(" " + a);}
-		System.out.print(" ]");
-	}
-	
+
 	//string to tokened arraylist converter.
 	public static void tokenize(String str, ArrayList<String> strarr){
 		StringTokenizer tkz = new StringTokenizer(str);

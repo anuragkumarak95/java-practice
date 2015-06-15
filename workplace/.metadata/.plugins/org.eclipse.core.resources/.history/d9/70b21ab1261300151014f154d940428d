@@ -1,0 +1,22 @@
+package learnJAVA;
+
+import Experimentals.cons;
+
+class box1{
+	double width;
+	double height;
+}
+public class boxdemo2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		box1 mybox, mybox2;
+		mybox = new box1();
+		mybox.width =10;
+		mybox.height = 20;
+		double vol = mybox.width * mybox.height;
+		
+		cons.give("Volume of mybox: " + vol);
+	}
+
+}

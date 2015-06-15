@@ -1,0 +1,13 @@
+package learnJAVA;
+
+import Experimentals.cons;
+
+public class classdemo7 {
+
+	public static void main(String[] args) {
+		cons.give("Enter first number: ");
+		double num1 = Double.parseDouble(cons.take());
+
+	}
+
+}

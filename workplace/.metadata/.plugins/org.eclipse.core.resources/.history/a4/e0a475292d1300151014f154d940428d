@@ -1,0 +1,18 @@
+package learnJAVA;
+
+class box7{
+	double wd,ht;
+	
+	box7(double wdin, double htin){
+		wd = wdin;
+		ht = htin;
+	}
+}
+public class classdemo6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

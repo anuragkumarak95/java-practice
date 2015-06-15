@@ -1,0 +1,23 @@
+package learnJAVA;
+
+class box5{
+	double wd,ht;
+	
+	double vol(double wdin,double htin){
+		this.wd = wdin;
+		this.ht = htin;
+		double r = wd*ht;
+		return r;
+	}
+}
+public class boxdemo5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		box5 mybox1;
+		mybox1 = new box5();
+		double res = mybox1.vol(20,15);
+		System.out.println("Result :" + res);
+	}
+
+}

@@ -1,0 +1,12 @@
+package learnJAVA;
+
+
+public class usestatic {
+
+	static {System.out.println("ststic anonymous block.");}// static anonymous block is called before static main block.
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,32 @@
+package learnJAVA;
+
+class boxer{
+	double ln,wd,ht;
+	
+	boxer(){
+		ln = -1;
+		wd = -1;
+		ht = -1;
+	}
+	
+	boxer(double ln,double wd,double ht){
+		this.ln = ln;
+		this.wd = wd;
+		this.ht = ht;
+	}
+	
+	boxer(double ln){
+		this.ln = ln;
+	}
+	
+	
+}
+
+public class overloadedconstructor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

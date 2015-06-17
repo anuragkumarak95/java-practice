@@ -1,0 +1,19 @@
+package learnJAVA;
+
+class gen<T> {
+	T ob;
+	gen(T o){ob = o;}
+	T getob(){return ob;}
+	void showT(){
+		System.out.println("T is :" + ob.getClass().getName());
+	}
+}
+
+public class gendemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,34 @@
+package learnJAVA;
+
+class math{
+	int a,b;
+	math(){a=0;
+	b=0;}
+	
+	math(int a,int b){
+		this.a = a;
+		this.b = b;
+	}
+	
+	int div(){
+		return a / b;
+	}
+}
+
+public class trycatchexp {
+
+	public static void main(String[] args) {
+		// Try and Catch example
+		math m1 = new math(1,0);
+		try{
+		System.out.println("ok");
+		double r = m1.div();
+		System.out.print(r);
+		System.out.println("ok2");
+		}
+		catch(ArithmeticException e){
+			System.out.println(e);
+		}
+	}
+
+}

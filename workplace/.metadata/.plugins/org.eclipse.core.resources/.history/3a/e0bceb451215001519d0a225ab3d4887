@@ -1,0 +1,33 @@
+package Experimentals;
+
+class mylist<type>{
+	type obj[];
+	int count = 0;
+	
+	void add(type ob){
+		obj = new type[count+1];
+		obj[count]=ob;
+		count++;
+	}
+	
+	void show(){
+		for(type o : obj){
+			System.out.println("Value is: "+o);
+		}
+	}
+}
+
+public class myarraylist {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		mylist<String> l = new mylist<String>();
+		l.add("A");
+		l.add("A");
+		l.add("A");
+		l.add("A");
+		l.show();
+
+	}
+
+}

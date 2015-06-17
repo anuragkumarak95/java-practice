@@ -1,6 +1,6 @@
 package learnJAVA;
 
-class gen<T> {//template class.
+class gen<T> {//template class/generic class..
 	T ob;
 	
 	gen(T o){ob = o;}//constructor with T as argument object type.
@@ -18,7 +18,7 @@ public class gendemo {
 		// TODO using class template
 		gen<Integer> str = new gen<Integer>(100);
 		int i =str.getob();
-		System.out.println(i);
+		System.out.println("Value : "+i);
 		str.showType();
 	}
 

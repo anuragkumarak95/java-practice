@@ -1,0 +1,10 @@
+package learnJAVA;
+
+public class trycatchexp {
+
+	public static void main(String[] args) {
+		// Try and Catch example
+
+	}
+
+}

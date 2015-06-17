@@ -1,0 +1,19 @@
+package Experimentals;
+
+class mylist<type>{
+	type obj[] = new type;
+	int count = 0;
+	
+	void add(type ob){
+		
+	}
+}
+
+public class myarraylist {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

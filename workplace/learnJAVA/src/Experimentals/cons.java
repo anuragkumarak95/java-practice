@@ -17,6 +17,7 @@ public class cons {
 	public static void give(double txt){System.out.println(txt);}
 	public static void give(float txt){System.out.println(txt);}
 	public static void give(boolean txt){System.out.println(txt);}
+	public static void give(Exception e){System.out.println(e);}
 	
 	//also array output functions.
 	public static void give(String[] txt){

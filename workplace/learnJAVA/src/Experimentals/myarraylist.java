@@ -17,7 +17,13 @@ class mylist<type>{
 }
 
 public class myarraylist {
+	static{
 
+		user u1 = new user();//creating a new user here.
+		//u1.toggle = 1; //myownHACKcode:  as the toggle is not private instance, if this line executes, any login or password will execute the below codes. toggling the user logined unappropriately.
+		u1.options();//looking at the user options.
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try{

@@ -1,0 +1,12 @@
+package learnJAVA;
+
+
+
+public class inheritance_exp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

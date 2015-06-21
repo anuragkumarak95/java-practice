@@ -1,0 +1,29 @@
+package learnJAVA;
+
+abstract class bank{
+	abstract double ROI();
+	void servise(){
+		System.out.println("1. Credit Card");
+		System.out.println("2. Savings Account");
+	}
+}
+
+class hdfc extends bank{
+	double ROI(){
+		return 10;
+	}
+}
+
+public class abstract_bank {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		hdfc h1 = new hdfc(),h2 = new hdfc();
+		h1.ROI();
+		h1.servise();
+		h2.ROI();
+		h2.servise();
+		
+	}
+
+}

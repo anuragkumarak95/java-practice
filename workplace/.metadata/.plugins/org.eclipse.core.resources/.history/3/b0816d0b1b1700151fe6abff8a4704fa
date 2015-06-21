@@ -1,0 +1,26 @@
+package Experimentals;
+
+class searcher{
+	String word,sent;
+	
+	searcher(){
+		word = " ";
+		sent = " ";
+	}
+	
+	searcher (String word, String sent){
+		this.sent = sent;
+		this.word = word;
+	}
+	
+	
+}
+
+public class stringmatch_thru_HASHSET {
+
+	public static void main(String[] args) {
+		// TODO matching the string provided in the available sentence using hashset.
+
+	}
+
+}

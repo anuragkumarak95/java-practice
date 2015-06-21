@@ -1,0 +1,14 @@
+package learnJAVA;
+
+class multibox{
+	private double ln,wd,ht;
+}
+
+public class demomultiinheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

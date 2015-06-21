@@ -1,0 +1,32 @@
+package Experimentals;
+
+import java.util.StringTokenizer;
+
+
+
+public class hashset_exps {
+
+	public static void main(String args[]){
+		cons.give("Enter your string to search : ");
+		String word = cons.take();
+		cons.give("Enter the sentence from which you need to search : ");
+		String sent = cons.take();
+		StringTokenizer str = new StringTokenizer(sent);
+		int count = 0,cnt=0;
+		cons.give(word + " fonund in the sentence at ");
+		while(str.hasMoreTokens()){
+			count++;
+			String chk = str.nextToken();
+			if(chk.equals(word)&&cnt==1){
+				cnt++;
+				cons.give(count);
+			}
+			else if(chk.equals(word)){
+				cnt++;
+				cons.give(" & "+count);
+			}
+		}
+		cons.give(" positions.");
+	}
+	
+}

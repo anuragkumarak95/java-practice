@@ -1,0 +1,10 @@
+package learnJAVA;
+
+public class interface_test {
+
+	public static void main(String[] args) {
+		// TODO using and testing interface type.
+
+	}
+
+}

@@ -1,0 +1,24 @@
+package learnJAVA;
+
+class boxinheri{
+	double ln,wd,ht;
+	
+	boxinheri(){
+		ln = -1;
+		wd = -1;
+		ht = -1;
+	}
+	
+	double vol(){
+		return ln*wd*ht;
+	}
+}
+
+public class inheritance_exp {
+
+	public static void main(String[] args) {
+		// TODO using the inheritance concept on classes.
+
+	}
+
+}

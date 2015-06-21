@@ -1,0 +1,41 @@
+package Experimentals;
+
+import java.util.HashSet;
+import java.util.StringTokenizer;
+
+class searcher{
+	String word,sent;
+	
+	searcher(){
+		word = " ";
+		sent = " ";
+	}
+	
+	searcher (String word, String sent){
+		this.sent = sent;
+		this.word = word;
+	}
+	
+	void find(){
+		StringTokenizer str = new StringTokenizer(sent);
+		HashSet<String> set = new HashSet<String>();
+		while(str.hasMoreTokens()){
+			set.add(str.nextToken());
+		}
+		
+		for (String chk : set){
+			if(chk.equals(word)){cons.give("Word matched in the sentence.");}
+		}
+		
+	}
+	
+}
+
+public class stringmatch_thru_HASHSET {
+
+	public static void main(String[] args) {
+		// TODO matching the string provided in the available sentence using hashset.
+
+	}
+
+}

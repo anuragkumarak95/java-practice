@@ -1,0 +1,24 @@
+package learnJAVA;
+
+import java.util.HashSet;//hashset only adds distict values.
+import java.util.Iterator;
+
+public class heshsetuseage {
+
+	public static void main(String[] args) {
+		// TODO hashset usage
+		HashSet<String> a1 = new HashSet<String>();
+		a1.add("Anurag");
+		a1.add("PAnkaj");
+		a1.add("GAurav");
+		a1.add("PAnkaj");//same element will not get added in hashset attributes.
+		a1.add("GAurav");//same element will not get added in hashset attributes.
+		
+		Iterator<String> it = a1.iterator();
+		while(it.hasNext()){
+			System.out.println(it.next());
+		}
+		System.out.println(a1);
+	}
+
+}

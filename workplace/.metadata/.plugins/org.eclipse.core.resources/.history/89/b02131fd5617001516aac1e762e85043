@@ -1,0 +1,70 @@
+package Experimentals;
+
+class user {
+	String uid,upass;
+	private String chkuid="root",chkupass="toor";
+	int toggle=0;
+	
+	user(String uid,String upass){
+		this.uid = uid.toLowerCase();
+		this.upass = upass.toLowerCase();
+	}
+	final void login(){
+		if(uid.equals(chkuid)&&upass.equals(chkupass)){cons.give("Access Granted...");toggle=1;}//grante login acces and toggle as logged in.
+		else{
+			cons.give("Wrong Authentication... ");
+			System.exit(0);//exit the transaction if not logined or not authentic user.
+			}
+	}
+	
+	final void options(){
+		if(toggle==1){
+			cons.give("Options available for you are: \n1. Change my password.\n2. Exit");
+			int choice = Integer.parseInt(cons.take());
+			switch(choice){
+			case 1: changepass();
+			break;
+			case 2: System.exit(0);
+			}
+		}
+		else{login();options();}//if the transaction is not authentic then authenticate it forcefully...
+	}
+	
+	final void changepass(){
+		if(toggle==1){
+			cons.give("Enter present password : ");
+			String ppss = cons.take();
+			if(ppss.equals(chkupass)){
+				cons.give("Enter new pasword : ");
+				String npass = cons.take();
+				cons.give("Re - Enter the new password : ");
+				String re_npass = cons.take();
+				if(re_npass.equals(npass)){chkupass = npass.toLowerCase();
+					cons.give("Password successfully changed.");}
+				else{cons.give("password didnt matched in above entries, try again...");
+					changepass();}
+			}
+			else{cons.give("Wrong password..");System.exit(0);}
+		}
+		else{login();changepass();}
+	}
+}
+
+public class login {
+
+	static{
+		cons.give("Enter User : ");
+		String uid = cons.take();
+		cons.give("Password : ");
+		String upass = cons.take();
+		user u1 = new user(uid,upass);
+
+		u1.options();
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		cons.give("main function body here...");
+	}
+
+}

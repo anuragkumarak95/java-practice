@@ -1,0 +1,81 @@
+package Experimentals;
+
+class user {
+	String uid,upass;
+	private String chkuid="root",chkupass="toor",uname = "Anurag Kumar";
+	int toggle=0;//the login aquired toggle which will be set 1 if the user is appropriately logined.
+	//not giving the toggle instance private initialisation, i make this code vulnerable as the toggle option can be manupilated outside the class now.
+	//if anyone sets it to 1, any login and password will autheticate the transaction.
+	
+	user(){
+		cons.give("Enter User : ");
+		uid = cons.take();
+		cons.give("Password : ");
+		upass = cons.take();
+	}
+	
+	user(String uid,String upass){
+		this.uid = uid.toLowerCase();
+		this.upass = upass.toLowerCase();
+	}
+	
+	
+	final void login(){
+		if(uid.equals(chkuid)&&upass.equals(chkupass)){cons.give("Access Granted..." + "\nWelcome " + uname  + " !");toggle=1;}//grante login acces and toggle as logged in.
+		else{
+			cons.give("Wrong Authentication... ");
+			System.exit(0);//exit the transaction if not logined or not authentic user.
+			}
+	}
+	
+	final void options(){//provides the programmed options present to the user here.
+		if(toggle==1){
+			cons.give("Options available for you are: \n1. Change my password.\n2. Exit");
+			int choice = Integer.parseInt(cons.take());
+			switch(choice){
+			case 1: changepass();//redirect to changepassword function.
+			break;
+			case 2: cons.give("Thank you, BYE..!!");System.exit(0);//exit option.
+			break;
+			default: cons.give("Unidentified option used..");
+			}
+		}
+		else{login();options();}//if the transaction is not authentic then authenticate it forcefully...
+	}
+	
+	final void changepass(){
+		if(toggle==1){
+			cons.give("Enter present password : ");
+			String ppss = cons.take();
+			if(ppss.equals(chkupass)){//recheck the user present password.
+				cons.give("Enter new pasword : ");
+				String npass = cons.take();
+				cons.give("Re - Enter the new password : ");
+				String re_npass = cons.take();
+				if(re_npass.equals(npass)){chkupass = npass.toLowerCase();//submit new password in lowercase condition.
+					cons.give("Password successfully changed.");}
+				else{cons.give("password didnt matched in above entries, try again...");//reentry password didnt match,execute the function again.
+					changepass();}
+			}
+			else{cons.give("Wrong password..");System.exit(0);}
+		}
+		else{login();changepass();}//if thie transaction is not authentic, then authenticate it and try again.
+	}
+	
+}//user class end-point.
+
+public class login {
+
+	static{
+
+		user u1 = new user();//creating a new user here.
+		//u1.toggle = 1; //myownHACKcode:  as the toggle is not private instance, if this line executes, any login or password will execute the below codes. toggling the user logined unappropriately.
+		u1.options();//looking at the user options.
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		cons.give("main function body here...");//this will only execute if the program doent exit in static anonymous block.
+	}
+
+}

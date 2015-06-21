@@ -1,0 +1,52 @@
+package learnJAVA;
+//single inheritance here.
+
+class boxinheri{
+	double ln,wd,ht;
+	
+	boxinheri(){//default constructor
+		ln = -1;
+		wd = -1;
+		ht = -1;
+	}
+	
+	boxinheri(double ln,double wd,double ht){//parameterized contructor.
+		this.ln = ln;
+		this.wd = wd;
+		this.ht = ht;
+	}
+	
+	boxinheri(double d){
+		ln = wd = ht = d;//multiple assignment operations in one syntax here.
+	}
+	
+	boxinheri(boxinheri b){//call by refrence constructor
+		ln = b.ln;
+		wd = b.wd;
+		ht = b.ht;
+	}
+	
+	double vol(){
+		return ln*wd*ht;
+	}
+}
+
+class boxweight extends boxinheri{
+	double wt;
+	boxweight(double wd,double ht,double dept,double wt){
+		this.wd = wd;
+		this.ht = ht;
+		this.ln = dept;
+		this.wt = wt;
+	}
+}
+
+
+public class inheritance_exp {
+
+	public static void main(String[] args) {
+		// TODO using the inheritance concept on classes.
+
+	}
+
+}

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+XML Descriptor:	<a href="/FirstServletProject/First">First</a>
+servlet: <a href="/FirstServletProject/First"><br />First2</a>
+</body>
+</html>

@@ -1,0 +1,32 @@
+package learnSERVLET.inputpractice;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class inputer
+ */
+@WebServlet("/inputer")
+public class inputer extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void giveme(HttpServletRequest rq, HttpServletResponse rs) throws ServletException, IOException {
+		// TODO Get input from a form in index.html page. servlet learning example phase 2.
+		String name = rq.getParameter("username");
+		String uid = rq.getParameter("uid");
+		String ip = rq.getRemoteAddr();
+		
+		rs.getWriter().println("username is : "+name);
+		rs.getWriter().println("user Email ID is : "+uid);
+		rs.getWriter().println("user IP Address is : "+ip);
+		
+	}
+
+}

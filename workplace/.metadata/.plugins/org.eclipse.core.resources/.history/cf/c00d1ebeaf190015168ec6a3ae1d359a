@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Servlet Example</title>
+</head>
+<body>
+<pre>
+1. <a href = "firstservlet">Hello Servlet ( Static Page ) </a>
+2. <a href="form.html">Request Object ( Dynamic Page )</a>
+3. <a href = "form2.html">Form example with more options.</a>
+4. <a href = "">Cookie saving and using example here.</a> 
+<!--  5. <a href = ""></a> 
+6. <a href = ""></a> 
+7. <a href = ""></a> 
+8. <a href = ""></a>  -->
+</pre>
+</body>
+</html>

@@ -8,6 +8,9 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.apache.catalina.Session;
 
 /**
  * Servlet implementation class chooselang
@@ -20,9 +23,16 @@ public class chooselang extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		// TODO study about creating and using cookie.also redirecting to a page.
+
+		
+		String uname = request.getParameter("uname");
 		String ulang = request.getParameter("lang");
-	
+		
+		Cookie cname = new Cookie("name",uname),clang = new Cookie("lang",ulang);
+		response.addCookie(clang);
+		response.addCookie(cname);
+		response.sendRedirect("userdetail");
 
 	}
 

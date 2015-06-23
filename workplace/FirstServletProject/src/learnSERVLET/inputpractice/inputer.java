@@ -62,5 +62,9 @@ public class inputer extends HttpServlet {
 		}
 		
 	}
+	
+	public static void hi(HttpServletResponse rs) throws IOException{
+		rs.getWriter().println("hi");
+	}
 
 }

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>First Servlet Project</title>
+</head>
+<body>
+servlet:	<a href="/FirstServletProject/First">First</a><br />
+Show Me Last Users : <a href="/FirstServletProject/inputer">First2</a>
+<br /><br />
+<form action="inputer" method = "get">
+	name : <input type="text" name="username"><br/>
+	ID : <input type="text" name="uid"><br />
+	Password : <input type="text" name="upass"><br />
+	<input type="submit" value="SUBMIT"><br />
+	<input type="button" value="HI">
+</form>
+</body>
+</html>

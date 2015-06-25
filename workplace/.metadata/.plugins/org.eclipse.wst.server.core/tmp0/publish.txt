@@ -1,5 +1,3 @@
 #Tomcat publish data
-#Thu Jun 25 00:41:14 IST 2015
-org.eclipse.jst.jee.server\:mypractice=C\:\\xampp\\tomcat\\wtpwebapps\\mypractice
-org.eclipse.jst.jee.server\:FirstServletProject=C\:\\xampp\\tomcat\\wtpwebapps\\FirstServletProject
-org.eclipse.jst.jee.server\:servlet\ example=C\:\\xampp\\tomcat\\wtpwebapps\\servlet example
+#Thu Jun 25 12:53:36 IST 2015
+org.eclipse.jst.jee.server\:CRUDS_XML=C\:\\xampp\\tomcat\\wtpwebapps\\CRUDS_XML

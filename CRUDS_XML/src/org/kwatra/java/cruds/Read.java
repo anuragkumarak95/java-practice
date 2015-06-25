@@ -22,7 +22,7 @@ public class Read extends HttpServlet {
 		try{
 			
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","1234");
+			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","1593");
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery("select * from demo");
 			while(rs.next()) {
@@ -35,7 +35,8 @@ public class Read extends HttpServlet {
 		    System.out.println(e.getMessage());
 		}
 		
-		w.println("<fieldset><a href=\"form.html\">Create</a>");
+		w.println("<fieldset><a href=\"index.html\">HOME</a>");
+		w.println("<a href=\"form.html\">Create</a>");
 		w.println("<a href=\"form_upd.html\">Update</a>");
 		w.println("<a href=\"form_del.html\">Delete</a>");
 		w.println("</fieldset>");

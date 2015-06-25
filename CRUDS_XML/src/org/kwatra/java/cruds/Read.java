@@ -25,12 +25,12 @@ public class Read extends HttpServlet {
 			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","1593");
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery("select * from demo");
-			while(rs.next()) {
+			rs.next();
 				int id = rs.getInt("id");
 				String f = rs.getString("first");
 				String l = rs.getString("last");
 				w.print("<br />"+"ID: "+id+"<br />"+"Name: " +f+"<br />"+"Last:" +l);
-			}
+			
 		} catch(Exception e) {
 		    System.out.println(e.getMessage());
 		}

@@ -1,0 +1,7 @@
+INDEX VERSION 1.126
+C:\Users\Anurag\Desktop\jv\java-practice\workplace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4185115777.index
+\JSP_Examples\src
+C:\Users\Anurag\Desktop\jv\java-practice\workplace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\694021076.index
+\Login\src
+C:\Users\Anurag\Desktop\jv\java-practice\workplace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2758429338.index
+\JSP_Examples\src

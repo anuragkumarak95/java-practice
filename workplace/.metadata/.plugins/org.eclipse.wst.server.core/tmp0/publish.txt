@@ -1,3 +1,5 @@
 #Tomcat publish data
-#Thu Jun 25 12:53:36 IST 2015
+#Thu Jun 25 23:32:23 IST 2015
+org.eclipse.jst.jee.server\:Login=C\:\\xampp\\tomcat\\wtpwebapps\\Login
+org.eclipse.jst.jee.server\:JSP_Examples=C\:\\xampp\\tomcat\\wtpwebapps\\JSP_Examples
 org.eclipse.jst.jee.server\:CRUDS_XML=C\:\\xampp\\tomcat\\wtpwebapps\\CRUDS_XML

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Servlet_Example</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>ServletContextDemo</servlet-name>
+    <servlet-class>org.kwatra.j2ee.Servlet.TestServletContext</servlet-class>
+  </servlet>
+  <context-param>
+    <param-name>Name</param-name>
+    <param-value>Khuchbhi</param-value>
+  </context-param>
+  <servlet-mapping>
+    <servlet-name>ServletContextDemo</servlet-name>
+    <url-pattern>/servletcontexttest</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ServletConfigDemo</servlet-name>
+    <servlet-class>org.kwatra.j2ee.Servlet.TestServletConfig</servlet-class>
+    <init-param>
+      <param-name>Name</param-name>
+      <param-value>Kirti</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletConfigDemo</servlet-name>
+    <url-pattern>/servletconfigtest</url-pattern>
+  </servlet-mapping>  
+</web-app>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>user form</title>
+</head>
+<body>
+
+this page is to understand the utilization on init, session and doGet, doPost methods of the servlet.
+<br /><br />
+DOGET FORM BELOW:<br />
+
+
+</body>
+</html>

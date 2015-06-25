@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>user form</title>
+</head>
+<body>
+
+this page is to understand the utilization on init, session and doGet, doPost methods of the servlet.
+<br /><br />
+DOGET FORM BELOW:<br />
+<form action = "servlet1" method = "get">
+		User Name : <input type = "text" name = "uname" placeholder="Username here" /><br />
+		Password :  <input type = "password" name = "upass" /><br />
+		Gender :    <input type = "radio" name = "ugender" value = "MALE" />Male<br />
+				    <input type = "radio" name = "ugender" value = "FEMALE" />FEMALE<br />
+					<!-- <input type = "checkbox" value = "Good Morning" name = "uchk" />Good Morning<br />
+					<input type = "checkbox" value = "Good Evening" name = "uchk" />Good Evening<br />
+					<select name = "uvehicle">
+						<option value = "Volvo">Volvo</option>
+						<option value = "Saab">Saab</option>
+						<option value = "Merc">Merc</option>
+						<option value = "Audi">Audi</option>
+					</select>	<br />	
+					<textarea name = "utexta" rows="4" cols="50"></textarea><br /> -->
+					<input type = "submit" value = "SUBMIT HERE">
+	</form>
+
+</body>
+</html>

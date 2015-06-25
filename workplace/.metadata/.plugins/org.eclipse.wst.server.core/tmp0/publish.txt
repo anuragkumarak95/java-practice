@@ -1,4 +1,5 @@
 #Tomcat publish data
-#Tue Jun 23 19:51:22 IST 2015
+#Thu Jun 25 00:41:14 IST 2015
+org.eclipse.jst.jee.server\:mypractice=C\:\\xampp\\tomcat\\wtpwebapps\\mypractice
 org.eclipse.jst.jee.server\:FirstServletProject=C\:\\xampp\\tomcat\\wtpwebapps\\FirstServletProject
 org.eclipse.jst.jee.server\:servlet\ example=C\:\\xampp\\tomcat\\wtpwebapps\\servlet example

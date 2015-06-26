@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MULTIQUERY</title>
+</head>
+<body>
+
+<fieldset>
+<legend>Write queries here</legend>
+<form action="render.jsp" method="post">
+	&emsp;<b>DB USER</b> ID : <input type="text" name = "dbid" value="hr" />
+	PASSWORD : <input type="password" name = "dbpass" value="1593" /><br /><br />
+&emsp;<textarea name = "texta" rows="20" cols="130" 
+	placeholder=
+"query1;
+query2;
+query3;
+query4;
+   :
+   :
+   :
+queryn;"></textarea><br /><br />
+&emsp;<input type = "submit" value = "SUBMIT HERE" />
+</form>
+<br />
+<p align="RIGHT">Developed by : <a href="https://github.com/anuragkumarak95">Anurag Kumar</a>&emsp;</p>
+</fieldset>
+
+</body>
+</html>

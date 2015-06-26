@@ -7,7 +7,13 @@
 <title>Request Object</title>
 </head>
 <body>
-	<% 	String name  = request.getParameter("name"); %>
-	<% out.println(name); %>
+	<% 	String name[]  = request.getParameterValues("name"),allnames="";
+		int i=1;
+		for(String s : name){
+			allnames=allnames+i+"."+s+"<br />";
+			i++;
+		}
+	%>
+	<% out.println(allnames); %>
 </body>
 </html>

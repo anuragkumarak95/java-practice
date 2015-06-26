@@ -1,5 +1,6 @@
 #Tomcat publish data
-#Fri Jun 26 22:11:02 IST 2015
-org.eclipse.jst.jee.server\:CRUDS_JSP=C\:\\xampp\\tomcat\\wtpwebapps\\CRUDS_JSP
+#Sat Jun 27 00:45:46 IST 2015
 org.eclipse.jst.jee.server\:Login=C\:\\xampp\\tomcat\\wtpwebapps\\Login
+org.eclipse.jst.jee.server\:CRUDS_JSP=C\:\\xampp\\tomcat\\wtpwebapps\\CRUDS_JSP
 org.eclipse.jst.jee.server\:multiquery=C\:\\xampp\\tomcat\\wtpwebapps\\multiquery
+org.eclipse.jst.jee.server\:JSTL_Examples=C\:\\xampp\\tomcat\\wtpwebapps\\JSTL_Examples

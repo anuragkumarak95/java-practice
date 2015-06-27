@@ -8,14 +8,31 @@
 </head>
 <body>
 <%
-user admin = new user();
-admin.setUname("Admin_NAME");//using the user() setters.
-admin.setUpass("Admin_PASS");
-admin.setUgen("Admin_IS_MALE");
+user adminuser = new user();
+adminuser.setUname("Admin_NAME");//using the user() setters.
+adminuser.setUpass("Admin_PASS");
+adminuser.setUgen("Admin_IS_MALE");
 
 session.setAttribute("sid", session.getId());
-session.setAttribute("admin", admin);
-request.setAttribute("user", admin);
+/* session.setAttribute("admin", admin);
+request.setAttribute("user", admin); */
+
+%>
+
+<jsp:useBean id="admin" class="org.jstlpractice.ak.user" scope="session">
+	<%-- creating beans in the jsp for request dispatcher and attribute setting of request scope and session scope. --%>
+	<jsp:setProperty property="uname" name="admin" value="<%=adminuser.getUname()%>" />
+	<jsp:setProperty property="upass" name="admin" value="<%=adminuser.getUpass()%>" />
+	<jsp:setProperty property="ugen" name="admin" value="<%=adminuser.getUgen()%>" />
+</jsp:useBean>
+
+<jsp:useBean id="user" class="org.jstlpractice.ak.user" scope="request">
+	<jsp:setProperty property="uname" name="user" value="<%=adminuser.getUname()%>" />
+	<jsp:setProperty property="upass" name="user" value="<%=adminuser.getUpass()%>" />
+	<jsp:setProperty property="ugen" name="user" value="<%=adminuser.getUgen()%>" />
+</jsp:useBean>
+
+<% 
 
 //using request attribute dispatcher to obtain new attribues just setted here as objects in the dispatched page.
 RequestDispatcher dispatcher = request.getRequestDispatcher("taker.jsp");
@@ -25,7 +42,7 @@ dispatcher.forward(request, response);
 <fieldset>
 <legend>FILL THIS</legend>
 <form action="taker.jsp" method="post">
-UserName : <input type="text" name="uname" placeholder = "User Name Here" /><br />
+UserName : <input type="text" name="uname" placeholder="User Name Here" /><br />
 Password : <input type="password" name="upass" /><br />
 Gender : <input type="radio" name="ugen" value="MALE" />MALE&emsp;
 <input type="radio" name="ugen" value="FEMALE" />FEMALE

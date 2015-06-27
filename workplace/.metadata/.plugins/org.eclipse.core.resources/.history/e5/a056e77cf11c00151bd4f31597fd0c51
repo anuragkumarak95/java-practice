@@ -1,0 +1,5 @@
+package org.spring.prac;
+
+public class DrawEvent {
+
+}

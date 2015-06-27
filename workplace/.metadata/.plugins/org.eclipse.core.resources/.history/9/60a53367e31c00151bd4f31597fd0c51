@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd" >
+		
+		<bean id="shape" class="org.spring.prac.Shape">
+		<property name="points">
+			<list>
+			<value>"1"</value>
+			<value>"2"</value>
+			<value>"3"</value>
+			<value>"4"</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
+		<property name="locations" value="myset.valuesobj" />
+	</bean>
+	
+	<context:annotation-config />
+	<context:component-scan base-package="org.spring.prac" /><!-- this context tag is used to scan the base package for any provided component annotation,i.e., 
+	any class annotated as a specific bean of the name similar to className itself. -->
+	
+</beans>

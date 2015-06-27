@@ -1,0 +1,14 @@
+package org.spring.prac;
+
+import org.springframework.context.ApplicationEvent;
+
+public class myeventlistner extends ApplicationEvent{
+
+	public myeventlistner(Object source) {
+		super(source);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}

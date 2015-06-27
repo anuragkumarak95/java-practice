@@ -1,0 +1,14 @@
+package org.spring.prac;
+
+import org.springframework.context.ApplicationEvent;
+import org.springframework.context.ApplicationListener;
+
+public class myeventlistner implements ApplicationListener{
+
+	@Override
+	public void onApplicationEvent(ApplicationEvent arg0) {
+		System.out.println(arg0.toString());
+		
+	}
+
+}

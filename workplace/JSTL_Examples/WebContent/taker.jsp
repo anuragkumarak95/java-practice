@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1" import="org.jstlpractice.ak.user"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <jsp:useBean id="user" class="org.jstlpractice.ak.user" scope="request">
-	<jsp:setProperty property="*" name="user" /> 
+	<jsp:setProperty property="*" name="user" /> <%-- if all te names of Parameters matches the names of membervariables of the class initialised, then property can be put * to set all the membervariables. --%>
 </jsp:useBean>
 <jsp:useBean id="admin" class="org.jstlpractice.ak.user" scope="session"><%-- jsp:useBean is the taglib used to fetch or create(if fetch is false) ubjects dispatched by the predefined scope. --%>
 <jsp:setProperty property="uname" name="admin" value="Admin not gotten" /><%-- setProperty of the jsp taglibs use the setter methods of the class defined by the developer. --%>

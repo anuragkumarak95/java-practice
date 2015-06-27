@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd" >
+		
+
+	<bean id="p1" class="org.spring.prac.Point">
+		<property name="x" value="${p1.x}" />
+		<property name="y" value="${p1.y}" />
+	</bean>
+	<bean id="p2" class="org.spring.prac.Point">
+		<property name="x" value="${p2.x}" />
+		<property name="y" value="${p2.y}" />
+	</bean>
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
+		<property name="locations" value="props.properties" />
+	</bean>
+	
+	<context:annotation-config /><!-- this tag is used to import all the annotation config classes to the bean xml file -->
+	
+	<context:component-scan base-package="org.spring.prac" />
+	<!-- this context tag is used to scan the base package for any provided component annotation,i.e., 
+	any class annotated as a specific bean of the name similar to className itself.
+	only single bean declaration, limited use. -->
+	
+</beans>

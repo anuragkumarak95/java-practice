@@ -1,0 +1,52 @@
+package org.spring.prac;
+
+import java.util.ArrayList;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Required;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+
+public class Shape implements ApplicationContextAware{
+	ArrayList<String> points;
+	ApplicationContext contextshape;
+	
+
+	public ArrayList<String> getPoints() {
+		return points;
+	}
+	
+	@Required
+	public void setPoints(ArrayList<String> points) {
+		this.points = points;
+	}
+	
+	@PostConstruct
+	public void init(){
+		System.out.println("Bean initialization init() method.");
+		
+	}
+	
+	@PreDestroy
+	public void end(){
+		System.out.println("Bean Desposabile destroying here.");
+		
+	}
+	
+	
+	
+	public void draw(){
+		System.out.println("Drawing shape");
+		System.out.println("Ponits are " + this.getPoints());
+	}
+
+	@Override
+	public void setApplicationContext(ApplicationContext arg0)
+			throws BeansException {
+		contextshape = arg0;
+		
+	}
+}

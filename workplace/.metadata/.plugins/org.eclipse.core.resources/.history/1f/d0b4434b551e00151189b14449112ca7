@@ -1,0 +1,25 @@
+package org.hib.prac;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class first {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		UserDetail user = new UserDetail();
+		user.setName("Gaurav");
+		user.setPass("456");
+		user.setId(1);
+		SessionFactory sessionfactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionfactory.openSession();
+		session.clear();
+		session.save(user);
+		
+		session.getTransaction().commit();
+		session.close();
+		
+	}
+
+}

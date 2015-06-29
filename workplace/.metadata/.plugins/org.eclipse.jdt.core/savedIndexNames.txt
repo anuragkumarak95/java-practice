@@ -7,7 +7,6 @@ INDEX VERSION 1.126+C:\Users\Anurag\Desktop\jv\java-practice\workplace\.metadata
 2726362563.index
 2710905261.index
 385649491.index
-1654265192.index
 1121065476.index
 4155206848.index
 1726295500.index

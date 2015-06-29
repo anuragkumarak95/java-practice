@@ -23,6 +23,7 @@
 	
 	<!-- below tag is used to map the class(package.classname) file that needs to be hiberanted or is declared as Entity using WebAnnotations. -->
 	<mapping class="org.hib.prac.UserDetail" />
+	<mapping class="org.hib.prac.Vehicle" />
 
 </session-factory>
 </hibernate-configuration>

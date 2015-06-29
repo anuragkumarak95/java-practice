@@ -1,6 +1,0 @@
-package org.hib.prac;
-
-public class UserDetail {
-	String name;
-	String pass;
-}

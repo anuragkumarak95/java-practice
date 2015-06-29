@@ -14,7 +14,7 @@ public class firstspringpract {
 		String str[] = context.getBeanDefinitionNames();
 		System.out.println("Bean list craeted by the BEAN_FACTORY( AbsractApplicationContext ) : \n");
 		for(String s : str){
-			System.out.println(s);
+			System.err.println(s);
 		}
 	}
 

@@ -124,7 +124,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="Login" path="/Login" reloadable="true" source="org.eclipse.jst.jee.server:Login"/><Context docBase="CRUDS_JSP" path="/CRUDS_JSP" reloadable="true" source="org.eclipse.jst.jee.server:CRUDS_JSP"/><Context docBase="multiquery" path="/multiquery" reloadable="true" source="org.eclipse.jst.jee.server:multiquery"/><Context docBase="JSTL_Examples" path="/JSTL_Examples" reloadable="true" source="org.eclipse.jst.jee.server:JSTL_Examples"/></Host>
+      <Context docBase="Login" path="/Login" reloadable="true" source="org.eclipse.jst.jee.server:Login"/><Context docBase="CRUDS_JSP" path="/CRUDS_JSP" reloadable="true" source="org.eclipse.jst.jee.server:CRUDS_JSP"/><Context docBase="multiquery" path="/multiquery" reloadable="true" source="org.eclipse.jst.jee.server:multiquery"/><Context docBase="JSTL_Examples" path="/JSTL_Examples" reloadable="true" source="org.eclipse.jst.jee.server:JSTL_Examples"/><Context docBase="TMS" path="/TMS" reloadable="true" source="org.eclipse.jst.jee.server:TMS"/></Host>
     </Engine>
   </Service>
 </Server>

@@ -2,7 +2,7 @@ package org.hib.prac;
 
 import javax.persistence.Embeddable;
 
-@Embeddable //this tag specifies that this class is to be embedded to a Entity class to create its column in the table.
+@Embeddable // TODO this tag specifies that this class is to be embedded to a Entity class to create its column in the table.
 public class Address {
 	private String street,city,state;
 

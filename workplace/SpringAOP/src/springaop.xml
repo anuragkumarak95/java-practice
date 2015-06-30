@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+			
+
+    
+    <bean id="triangle" class="org.Spring.AOP.model.Triangle" >
+    	<property name="name" value="triangle-name"></property>
+    </bean>
+
+    <bean id="circle" class="org.Spring.AOP.model.Circle" >
+    	<property name="name" value="circle-name"></property>
+    </bean>
+    
+    <bean id="shape" class="org.Spring.AOP.service.shapeService" >
+    	<property name="triangle" ref="triangle"></property>
+    	<property name="circle" ref="circle"></property>
+    </bean>
+        
+</beans>

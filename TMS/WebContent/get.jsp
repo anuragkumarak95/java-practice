@@ -10,7 +10,7 @@
 			try
 			{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			Connection con = DriverManager.getConnection("jdbc:oracle:oci8:@localhost:1521:XE","hr","asdf");
+			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","hr","1593");
 			Statement st=con.createStatement();
  
 			ResultSet rs = st.executeQuery("SELECT userid FROM USERS where userid like '"+name+"%'");  

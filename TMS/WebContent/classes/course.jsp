@@ -10,7 +10,7 @@ class Course
     public void addCourse(String Name,String Description,String Trainer,String Cord,String Manager,String date,String Duration) {
 	try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-	    Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","1234");
+	    Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","1593");
 	    Statement st=con.createStatement();
 	    st.executeUpdate("insert into courses values('"+Name+"','"+Description+"','"+Trainer+"','"+Cord+"','"+Manager+"','"+date+"','"+Duration+"')");
 	    st.close();
@@ -25,7 +25,7 @@ class Course
 	ResultSet rs=null;
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-	    Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","1234");
+	    Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","1593");
 	    Statement st=con.createStatement();
             rs=st.executeQuery("Select * from courses");
 	    return rs;
@@ -43,7 +43,7 @@ class Course
 	   ResultSet rs=null;
            try {
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","1234");
+		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","1593");
 		Statement st=con.createStatement();
                 rs=st.executeQuery("Select * from courses where name='"+id+"'");
 		return rs;
@@ -57,7 +57,7 @@ class Course
     public void setCourse(String Name,String Description,String trainer,String coordinator,String manager,String startDate,String duration) {
 	   try {
                Class.forName("oracle.jdbc.driver.OracleDriver");
-	       Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","1234");
+	       Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","1593");
 	       Statement st=con.createStatement();
 	       st.executeUpdate("update courses set Description='"+Description+"',trainer='"+trainer+"',coordinator='"+coordinator+"',manager='"+manager+"',startdate='"+startDate+"',duration='"+duration+"' where name='"+Name+"'");
                st.close();

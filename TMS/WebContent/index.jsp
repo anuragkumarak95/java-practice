@@ -1,8 +1,7 @@
 <%@include file="classes/template.jsp"%>
 <%@include file="classes/user.jsp"%> 
-<%
 
-	Template objTemplate=new Template();
+<% Template objTemplate=new Template();
 	     
 	String UserID=request.getParameter("UserID");
 	String Password=request.getParameter("Password");   

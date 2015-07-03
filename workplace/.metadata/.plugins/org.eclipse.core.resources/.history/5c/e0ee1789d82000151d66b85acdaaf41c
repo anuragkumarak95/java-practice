@@ -1,0 +1,9 @@
+package org.DAO.Spring.DAOServices;
+
+import org.springframework.jdbc.core.simple.SimpleJdbcDaoSupport;
+
+public class jdbcDAOimplementer extends SimpleJdbcDaoSupport{
+
+
+
+}

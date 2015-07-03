@@ -1,0 +1,52 @@
+package org.DAO.Spring.DAOServices;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+import org.DAO.Spring.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class JdbcService {
+	@Autowired
+	DataSource dataSource; 
+	//using Spring provided DataSource that is defined in spring.xml as a bean with all the connection properties to reduce the boilerplate codes.
+	
+	
+	public DataSource getDataSource() {
+		return dataSource;
+	}
+
+
+	public void setDataSource(DataSource dataSource) {
+		this.dataSource = dataSource;
+	}
+
+
+	public User getUserByID(int id){
+		Connection con = null;
+		User user = null;
+		try{
+		con = dataSource.getConnection();
+		PreparedStatement ps = con.prepareStatement("select * from spring_dao where u_id=?");
+		ps.setInt(1, id);
+		ResultSet rs = ps.executeQuery();
+		rs.next();
+		user = new User(id,rs.getString("u_name"));
+		rs.close();
+		ps.close();
+		}catch(Exception e){throw new RuntimeException(e);}
+		finally{try {
+			con.close();
+		} catch (SQLException e) {}
+		
+		}
+		return user;
+	}
+	
+}

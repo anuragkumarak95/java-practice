@@ -1,0 +1,61 @@
+package org.DAO.Spring.DAOServices;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+import org.DAO.Spring.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
+
+@Component
+public class JdbcService {
+	
+	DataSource dataSource; 
+	//using Spring provided DataSource that is defined in spring.xml as a bean with all the connection properties to reduce the boilerplate codes.
+	
+	JdbcTemplate jdbcTemplate = new JdbcTemplate();
+	// here JdbcTemplaet of springframework is used for the purpose of reducing the boilerplate codes as much as possible, this class self executes all the fetching and executing of query and return a specific result as the developer ask it to.
+	
+	public DataSource getDataSource() {
+		return dataSource;
+	}
+
+	@Autowired
+	public void setDataSource(DataSource dataSource) {
+		this.jdbcTemplate = new JdbcTemplate(dataSource);
+		this.dataSource = dataSource;
+	}
+
+
+	public User getUserByID(int id){
+		Connection con = null;
+		User user = null;
+		try{
+		con = dataSource.getConnection(); //using dataSource to create connections.
+		PreparedStatement ps = con.prepareStatement("select * from spring_dao where u_id=?");
+		ps.setInt(1, id);
+		ResultSet rs = ps.executeQuery();
+		rs.next();
+		user = new User(id,rs.getString("u_name"));
+		rs.close();
+		ps.close();
+		}catch(Exception e){throw new RuntimeException(e);}
+		finally{try {
+			con.close();
+		} catch (SQLException e) {}
+		
+		}
+		return user;
+	}
+	
+	public int userCount(){
+		
+		return jdbcTemplate.queryForInt("select count(*) from spring_dao");
+	}
+	
+}

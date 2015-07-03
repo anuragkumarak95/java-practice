@@ -1,0 +1,23 @@
+package org.DAO.Spring;
+
+import org.DAO.Spring.DAOServices.JdbcService;
+import org.DAO.Spring.model.User;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class SpringDao {
+
+	public static void main(String[] args) {
+		AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+		context.registerShutdownHook();
+		JdbcService serv = (JdbcService)context.getBean("jdbcService");
+		
+		User user = serv.getUser_ObjectMapped(1);
+		
+		String username = serv.getUser_usingJDBCtemp(1);
+		int count = serv.userCount();
+		System.out.println(user.getUid()+" "+user.getUname());
+		System.err.println("[TOTAL USER] "+count);
+	}
+
+}

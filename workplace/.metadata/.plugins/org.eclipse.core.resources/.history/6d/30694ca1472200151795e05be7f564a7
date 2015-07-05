@@ -1,0 +1,20 @@
+package org.hib.prac.kids;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+import org.hib.prac.Vehicle;
+
+@Entity
+@DiscriminatorValue("bike")
+public class twowheeler extends Vehicle {
+	private String steeringHandle;
+
+	public String getSteeringHandle() {
+		return steeringHandle;
+	}
+
+	public void setSteeringHandle(String steeringHandle) {
+		this.steeringHandle = steeringHandle;
+	}
+}

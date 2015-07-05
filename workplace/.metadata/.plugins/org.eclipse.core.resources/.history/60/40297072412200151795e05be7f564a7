@@ -1,0 +1,7 @@
+package org.hib.prac.kids;
+
+import org.hib.prac.Vehicle;
+
+public class twowheeler extends Vehicle {
+
+}

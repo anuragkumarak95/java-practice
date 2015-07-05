@@ -1,27 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.awt.List"/>
-<fullyQualifiedTypeName name="javax.annotation.PreDestroy"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Required"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
-<fullyQualifiedTypeName name="javax.annotation.Resource"/>
-<fullyQualifiedTypeName name="org.springframework.context.ApplicationContextAware"/>
-<fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
-<fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
-<fullyQualifiedTypeName name="org.hibernate.Session"/>
-<fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
-<fullyQualifiedTypeName name="javax.persistence.Embedded"/>
-<fullyQualifiedTypeName name="javax.persistence.AttributeOverrides"/>
-<fullyQualifiedTypeName name="javax.persistence.AttributeOverride"/>
-<fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="javax.persistence.ElementCollection"/>
 <fullyQualifiedTypeName name="javax.persistence.JoinColumns"/>
 <fullyQualifiedTypeName name="org.hibernate.annotations.GenericGenerator"/>
 <fullyQualifiedTypeName name="org.hibernate.annotations.CollectionId"/>
 <fullyQualifiedTypeName name="org.hib.prac.UserDetail"/>
-<fullyQualifiedTypeName name="javax.persistence.Entity"/>
-<fullyQualifiedTypeName name="javax.persistence.Id"/>
 <fullyQualifiedTypeName name="javax.persistence.Table"/>
 <fullyQualifiedTypeName name="javax.persistence.Column"/>
 <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
@@ -49,7 +33,6 @@
 <fullyQualifiedTypeName name="org.springframework.jdbc.core.JdbcTemplate"/>
 <fullyQualifiedTypeName name="org.springframework.jdbc.core.RowMapper"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.DAO.Spring.DAOServices.JdbcService"/>
 <fullyQualifiedTypeName name="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate"/>
 <fullyQualifiedTypeName name="org.springframework.jdbc.core.namedparam.SqlParameterSource"/>
@@ -60,4 +43,21 @@
 <fullyQualifiedTypeName name="org.DAO.Spring.DAOServices.jdbcDAOimplementer"/>
 <fullyQualifiedTypeName name="org.DAO.Spring.SpringDao"/>
 <fullyQualifiedTypeName name="org.DAO.Spring.DAOServices.JdbcDAOimplementer"/>
+<fullyQualifiedTypeName name="org.hib.prac.kids.twowheeler"/>
+<fullyQualifiedTypeName name="org.hib.prac.kids.fourWheeler"/>
+<fullyQualifiedTypeName name="javax.persistence.InheritanceType"/>
+<fullyQualifiedTypeName name="javax.persistence.DiscriminatorColumn"/>
+<fullyQualifiedTypeName name="javax.persistence.DiscriminatorType"/>
+<fullyQualifiedTypeName name="javax.persistence.DiscriminatorValue"/>
+<fullyQualifiedTypeName name="javax.persistence.Inheritance"/>
+<fullyQualifiedTypeName name="org.hib.prac.kids.kidsOfKids.SUV"/>
+<fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
+<fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
+<fullyQualifiedTypeName name="org.hibernate.Session"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+<fullyQualifiedTypeName name="org.hibernate.Query"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.Hibernate.CRUD.dto.CrudUser"/>
 </qualifiedTypeNameHistroy>

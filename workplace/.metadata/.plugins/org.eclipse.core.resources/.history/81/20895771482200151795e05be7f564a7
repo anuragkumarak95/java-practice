@@ -1,0 +1,19 @@
+package org.hib.prac.kids;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+import org.hib.prac.Vehicle;
+@Entity
+@DiscriminatorValue("Car")
+public class fourWheeler extends Vehicle {
+	private String steeringWheel;
+
+	public String getSteeringWheel() {
+		return steeringWheel;
+	}
+
+	public void setSteeringWheel(String steeringWheel) {
+		this.steeringWheel = steeringWheel;
+	}
+}

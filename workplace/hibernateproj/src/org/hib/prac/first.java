@@ -1,5 +1,8 @@
 package org.hib.prac;
 
+import org.hib.prac.kids.fourWheeler;
+import org.hib.prac.kids.twowheeler;
+import org.hib.prac.kids.kidsOfKids.SUV;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -98,6 +101,29 @@ public class first {
 		System.err.println("\n\n[VEHICLE - 1 - INFO] Fetched user : "+vehicle.getUser().getName());
 		System.err.println("[VEHICLE - 2 - INFO] Fetched user : "+vehicle1.getUser().getName());
 		System.err.println("[VEHICLE - 3 - INFO] Fetched user : "+vehicle2.getUser().getName());
+	
+/*--------------------------------inheritance practices here--------------------------------------------------------------------------------------------------------------------------------------------- */
+	session.close();
+	Vehicle inveh = new Vehicle();
+	inveh.setName("inheritance-vehicle");
+	
+	twowheeler twee = new twowheeler();
+	twee.setSteeringHandle("kawasaki");
+	
+	fourWheeler fwee = new fourWheeler();
+	fwee.setSteeringWheel("porche");
+	
+	SUV suv1 = new SUV();
+	suv1.setSuv("big-one");
+	
+	session = sessionfactory.openSession();
+	session.beginTransaction();
+	session.save(inveh);
+	session.save(twee);
+	session.save(fwee);
+	session.save(suv1);
+	
+	session.getTransaction().commit();
+	
 	}
-
 }

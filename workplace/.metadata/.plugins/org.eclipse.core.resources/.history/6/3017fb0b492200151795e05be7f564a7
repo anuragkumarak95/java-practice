@@ -1,0 +1,15 @@
+package org.hib.prac.kids.kidsOfKids;
+
+import org.hib.prac.kids.twowheeler;
+
+public class SUV extends twowheeler {
+	private String suv;
+
+	public String getSuv() {
+		return suv;
+	}
+
+	public void setSuv(String suv) {
+		this.suv = suv;
+	}
+}

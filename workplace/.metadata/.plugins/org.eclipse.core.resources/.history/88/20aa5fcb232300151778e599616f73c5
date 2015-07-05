@@ -1,0 +1,63 @@
+package org.Hibernate.CRUD;
+
+import java.util.List;
+
+import org.Hibernate.CRUD.dto.CrudUser;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class Main_Crud {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		
+		/* Create.
+		 * 
+		 * for(int i=0;i<10;i++){
+			CrudUser user = new CrudUser();
+			user.setName("User "+i);
+			session.save(user);
+		}*/ 
+		
+		
+		/* Read.
+		 * 
+		 * CrudUser user =(CrudUser) session.get(CrudUser.class, 15);
+		   System.out.println("User fetched "+user.getName());*/
+		
+		/* Update.
+		 * 
+		 * CrudUser user = (CrudUser) session.get(CrudUser.class, 15);
+		   user.setName("Updated username");
+		   session.update(user);*/
+		
+		/* Delete.
+		 * 
+		 * CrudUser user = (CrudUser) session.get(CrudUser.class, 15);
+		   session.delete(user);
+		*/
+		
+		Query qry=  session.createQuery("select name from CrudUser");
+		qry.setFirstResult(5);// setFirstResult(int) skips the list of result to the specified integer in the args, after those many rows of result is passed, it starts fetching
+		qry.setMaxResults(3);// this method restricts the query list to only fetch the no of results mentioned as the args in the method. from starting point of the fetch.(after first Result)
+		// the above 2 methods can be dynamically used for website or applet pagination... think of it!!
+		
+		List<String> userlist =  qry.list();
+		
+		for(String u : userlist){
+			System.out.println("[User] name : "+u);
+		}
+		System.out.println("user count is :"+ userlist.size());
+		
+		session.getTransaction().commit();
+		session.close();
+
+	}
+
+}

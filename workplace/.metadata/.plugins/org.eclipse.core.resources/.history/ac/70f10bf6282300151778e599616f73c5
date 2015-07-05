@@ -62,7 +62,6 @@ public class Main_Crud {
 		session.close();
 		
 		/*-----------------------------using named queries------------------------------------------- */
-		
 		session = sessionFactory.openSession();
 		session.beginTransaction();
 		qry = session.getNamedQuery("CrudUser.byID");
@@ -71,24 +70,6 @@ public class Main_Crud {
 		
 		System.out.println();
 		System.err.println("Using Named Query at Entity Level..//");
-		
-		for(CrudUser u : userlist){
-			System.out.println("[User] name : " + u.getName());
-		}
-		System.out.println("user count is :"+ userlist.size());
-		session.getTransaction().commit();
-		session.close();
-		
-		/*-----------------------------using named Native queries------------------------------------------- */
-		
-		session = sessionFactory.openSession();
-		session.beginTransaction();
-		qry = session.getNamedQuery("CrudUser.byName");
-		qry.setString(0, "User 8");
-		userlist = qry.list();
-		
-		System.out.println();
-		System.err.println("Using Named Native Query at Entity Level..//");
 		
 		for(CrudUser u : userlist){
 			System.out.println("[User] name : " + u.getName());

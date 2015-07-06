@@ -11,12 +11,16 @@
 	<property name="connection.url" >jdbc:oracle:thin:@localhost:1521:XE</property>
 	<property name="connection.username" >HR</property>
 	<property name="connection.password" >1593</property>
-	<property name="dialect" >org.hibernate.dialect.OracleDialect</property>
+	<property name="dialect" >org.hibernate.dialect.Oracle10gDialect</property>
    
     <property name="connection.pool_size">1</property>
    
     <!-- below prop shows running sql on console, debugger options -->
     <property name="show_sql">true</property>
+    
+    <!-- below prop defines the provider class for the second level cache ,default set by NoCacheProvider, e.i, no second level cache provider here. -->
+    <property name="cache.use_second_level_cache">false</property>
+    <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
    
     <!-- below prop drops and creates new table everytime we have a hibernate startup.(for value :create) -->
     <property name="hbm2ddl.auto" >update</property>

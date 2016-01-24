@@ -1,8 +1,0 @@
-package org.hib.prac;
-
-import javax.persistence.Embeddable;
-
-@Embeddable
-public class Address {
-	private String street,city,state;
-}

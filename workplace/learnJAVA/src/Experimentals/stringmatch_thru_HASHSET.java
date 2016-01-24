@@ -22,12 +22,15 @@ class searcher{
 		HashSet<String> set = new HashSet<String>();//    & saving those tokens in the hashset saving it distinctively.
 		while(str.hasMoreTokens()){
 			set.add(str.nextToken());
+			System.err.println(set);
 		}
 		
 		for (String chk : set){
+			System.err.println(chk);
 			if(chk.equals(word)){count++;cons.give("Word matched in the sentence.");}//match case.
 		}
-		if(count==0){cons.give("No match found in the sentence.");}//no match case.
+		if(count==0){
+			cons.give("No match found in the sentence."+count);}//no match case.
 	}
 	
 }

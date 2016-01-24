@@ -1,5 +1,0 @@
-package org.Hibernate.CRUD.dto;
-
-public class CrudUser {
-
-}

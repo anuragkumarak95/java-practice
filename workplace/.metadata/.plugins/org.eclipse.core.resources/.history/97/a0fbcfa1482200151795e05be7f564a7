@@ -1,7 +1,0 @@
-package org.hib.prac.kids.kidsOfKids;
-
-import org.hib.prac.kids.twowheeler;
-
-public class SUV extends twowheeler {
-
-}
